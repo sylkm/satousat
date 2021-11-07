@@ -1,4 +1,5 @@
- import 'package:get/get.dart';
+import 'package:get/get.dart';
+import 'package:flutter/src/services/system_chrome.dart';
 
 class HomeController extends GetxController {
   @override
@@ -8,23 +9,19 @@ class HomeController extends GetxController {
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.landscapeRight,
       DeviceOrientation.landscapeLeft,
-  ])
+    ]);
   }
 
   @override
   void onClose() {
-    name.value = '';
     super.onClose();
-     SystemChrome.setPreferredOrientations([
-    DeviceOrientation.landscapeRight,
-    DeviceOrientation.landscapeLeft,
-    DeviceOrientation.portraitUp,
-    DeviceOrientation.portraitDown,
-  ]);
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeRight,
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
   }
-
-
 }
- 
- 
- /*;*/
+
+/*;*/
